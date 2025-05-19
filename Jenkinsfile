@@ -1,16 +1,13 @@
 pipeline {
     agent any
      tools {
-         maven 'maven3'
+         maven 'Maven 3'
      }
     stages {
 
         stage('comile') {
             steps {
-                dir('keys') {
-
                 sh 'mvn compile'
-                }
             }
         }
         stage('Tests') {
